@@ -232,4 +232,8 @@
          Note: If the display supports multiple resolutions, please define the path config based on
          the highest resolution so that it can be scaled correctly in each resolution. -->
     <string name="config_mainDisplayShape" translatable="false">M20 0C10.7 0 0 10.7 0 24v0h24V0z</string>
+
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
 </resources>
