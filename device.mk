@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
 
 # FastbootD
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot-service.example_recovery \
     fastbootd
 
 # Init
