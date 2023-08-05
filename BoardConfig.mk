@@ -126,6 +126,9 @@ TARGET_USES_VULKAN := true
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# SEPolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # VINTF
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
