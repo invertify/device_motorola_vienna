@@ -1,2 +1,5 @@
 # Bluetooth
 bluetooth.device_id.vendor_id=0x0046
+
+# SKU specific properties
+import /product/etc/hardware.sku.${ro.boot.hardware.sku}.prop
