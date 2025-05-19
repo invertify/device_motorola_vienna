@@ -249,6 +249,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
 
+# Vibrator
+$(call soong_config_set_bool,mediatek_vibrator,supports_effects,true)
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
