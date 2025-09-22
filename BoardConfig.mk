@@ -132,6 +132,7 @@ TARGET_USES_VULKAN := true
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
 # Security patch level
 BOOT_SECURITY_PATCH := 2026-03-01
