@@ -213,6 +213,17 @@ vendor/firmware/soc7_0_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin
 vendor/lib64/libconnfem.so
 
+# WiFi
+vendor/etc/init/init.wlan_drv.rc
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+
+# WiFi (Firmware)
+vendor/firmware/txpowerctrl.cfg
+vendor/firmware/wifi.cfg
+
 # NVRAM
 vendor/lib64/libfile_op.so
 vendor/lib64/libnvram.so
