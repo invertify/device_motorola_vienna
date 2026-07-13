@@ -61,6 +61,11 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v31.so'),
+    (
+        'vendor/lib64/libnvram.so',
+        'vendor/lib64/libsysenv.so',
+    ): blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
