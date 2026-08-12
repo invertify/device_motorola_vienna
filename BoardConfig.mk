@@ -10,6 +10,7 @@ DEVICE_PATH := device/motorola/vienna
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
     init_boot \
     product \
     system \
@@ -37,6 +38,9 @@ BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_F2FS := true
+
+# DTBO
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
 # Kernel
 BOARD_KERNEL_BASE := 0x3fff8000
