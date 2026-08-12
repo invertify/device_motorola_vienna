@@ -126,6 +126,10 @@ TARGET_USES_VULKAN := true
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Security patch level
+BOOT_SECURITY_PATCH := 2026-03-01
+VENDOR_SECURITY_PATCH := 2026-03-01
+
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
