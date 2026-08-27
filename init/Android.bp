@@ -1,0 +1,11 @@
+//
+// Copyright (C) The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.mt6878",
+    src: "fstab.mt6878",
+    vendor: true,
+}
