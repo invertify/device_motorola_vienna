@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/motorola/vienna
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -43,7 +45,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6878
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.mt6878:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6878
+    $(DEVICE_PATH)/init/fstab.mt6878:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6878
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -53,7 +55,7 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/vienna/vienna-vendor.mk)
