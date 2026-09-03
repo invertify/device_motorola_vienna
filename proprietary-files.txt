@@ -1,3 +1,8 @@
+# Display (configs)
+vendor/etc/cust_color.xml
+vendor/etc/cust_pq.xml
+vendor/etc/pq_flag.xml
+
 # Display (Firmware)
 vendor/firmware/csot_goodix_cfg_group.bin
 vendor/firmware/csot_goodix_firmware.bin
