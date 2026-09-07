@@ -76,6 +76,18 @@ debug.hwui.use_hint_manager=true
 vendor.powerhal.disable_iosched=1
 vendor.powerhal.disp.idle_support=false
 
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+# Gatekeeper
+ro.hardware.gatekeeper=trustonic
+
+# Keystore
+ro.hardware.kmsetkey=trustonic
+
+# TEE
+ro.vendor.mtk_trustonic_tee_support=1
+
 # Picture Quality
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=2
