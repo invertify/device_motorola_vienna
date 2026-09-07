@@ -117,6 +117,12 @@ BOARD_USES_METADATA_PARTITION := true
 # Platform
 TARGET_BOARD_PLATFORM := mt6878
 
+# Display
+TARGET_SCREEN_DENSITY := 450
+
+# Graphics
+TARGET_USES_VULKAN := true
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
