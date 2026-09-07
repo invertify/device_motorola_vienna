@@ -45,6 +45,11 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
 
+# Cgroup and task_profiles
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6878
@@ -81,11 +86,30 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    libperfctl_vendor \
+    libpowerhalwrap_vendor
+
+PRODUCT_PACKAGES += \
+    init.mt6878.power.rc
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
-    hardware/motorola \
-    hardware/mediatek
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/mediatek \
+    hardware/mediatek/libmtkperf_client \
+    hardware/motorola
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/vienna/vienna-vendor.mk)

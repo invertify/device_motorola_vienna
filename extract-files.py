@@ -11,7 +11,10 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/motorola/vienna',
+    'hardware/google/interfaces',
+    'hardware/google/pixel',
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
     'hardware/motorola',
 ]
 

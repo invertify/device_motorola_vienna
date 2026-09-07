@@ -72,6 +72,10 @@ ro.vendor.arm.gralloc.shared_access_usage_mask=0x50000000
 debug.hwui.target_cpu_time_percent=30
 debug.hwui.use_hint_manager=true
 
+# Power
+vendor.powerhal.disable_iosched=1
+vendor.powerhal.disp.idle_support=false
+
 # Picture Quality
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=2

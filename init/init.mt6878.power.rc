@@ -1,0 +1,82 @@
+on early-init
+    write /proc/sys/kernel/sched_pelt_multiplier 1
+
+    # Boot perf tune
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 1200000
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 1500000
+    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 4212000000
+
+on init
+    write /sys/block/sdc/queue/scheduler mq-deadline
+
+    # Set teo as cpu idle governor
+    write /sys/devices/system/cpu/cpuidle/current_governor teo
+
+    # Update cpus for cpuset cgroup
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-5
+    write /dev/cpuset/foreground_window/cpus 0-5
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/camera-daemon/cpus 0-7
+
+    # Boot time governor
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor performance
+
+on charger
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 0
+    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
+
+on post-fs-data
+    # Boot time fs tune
+    write /sys/block/sdc/queue/iostats 0
+    write /sys/block/sdc/queue/nr_requests 256
+
+    # Boot perf tune
+    write /dev/cpuctl/system/cpu.uclamp.min 100
+    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/system-background/cpu.uclamp.min 100
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.min 100
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 100
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/background/cpu.uclamp.min 100
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
+
+on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
+    # End boot time fs tune
+    write /sys/block/sdc/queue/nr_requests 64
+
+    write /proc/sys/kernel/sched_migration_cost_ns 200000
+
+    # Restore boot perf tune
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq 0
+    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor schedutil
+
+    # Utilization clamping
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
+    write /proc/sys/kernel/sched_util_clamp_min 128
+
+    write /dev/cpuctl/system/cpu.uclamp.min 0
+    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 0
+    write /dev/cpuctl/system-background/cpu.uclamp.min 0
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
+    write /dev/cpuctl/foreground/cpu.uclamp.min 0
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
+    write /dev/cpuctl/top-app/cpu.uclamp.min 0
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
+    write /dev/cpuctl/background/cpu.uclamp.min 0
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+
+    # Start cpuqos
+    write /sys/devices/system/cpu/cpuqos/cpuqos_boot_complete 1

@@ -9,3 +9,10 @@ prebuilt_etc {
     src: "fstab.mt6878",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.mt6878.power.rc",
+    src: "init.mt6878.power.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
