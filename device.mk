@@ -52,7 +52,22 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.mt6878
+    fstab.enableswap \
+    fstab.mt6878 \
+    init.aee.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.insmod.mt6878.cfg \
+    init.insmod.sh \
+    init.modem.rc \
+    init.mt6878.rc \
+    init.mt6878.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.pstore.rc \
+    init_conninfra.rc \
+    ueventd.mt6878.rc
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/fstab.mt6878:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6878
