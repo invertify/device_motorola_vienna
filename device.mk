@@ -66,6 +66,7 @@ PRODUCT_PACKAGES += \
     init.mtkgki.rc \
     init.project.rc \
     init.pstore.rc \
+    init.vienna.rc \
     init_conninfra.rc \
     ueventd.mt6878.rc
 

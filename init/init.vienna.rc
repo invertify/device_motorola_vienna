@@ -1,0 +1,6 @@
+on early-init
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules moto_sched moto_binder
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules sensors_class leds-gpio awinic_sar sx937x_sar moto_mmap_fault
+
+on fs
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_relay touchscreen_u_mmi goodix_brl_u_mmi goodix_gt96x_u_mmi
