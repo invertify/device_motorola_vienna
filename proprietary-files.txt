@@ -134,9 +134,6 @@ vendor/lib64/vendor.mediatek.framework.mtksf_ext-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib64/vendor.mediatek.hardware.mtkpower-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
