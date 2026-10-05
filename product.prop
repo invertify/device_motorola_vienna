@@ -1,5 +1,8 @@
 # Bluetooth
 bluetooth.device_id.vendor_id=0x0046
 
+# Radio
+ro.vendor.radio.imei.sv=37
+
 # SKU specific properties
 import /product/etc/hardware.sku.${ro.boot.hardware.sku}.prop
