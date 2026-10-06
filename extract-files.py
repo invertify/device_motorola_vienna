@@ -59,6 +59,8 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so',
         ),
+    'vendor/lib64/librt_extamp_intf.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v31.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
