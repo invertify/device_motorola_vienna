@@ -33,6 +33,10 @@ vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
 vendor/lib64/libbwc.so
 vendor/lib64/libcvsd_mtk.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/libdmshal.so;DISABLE_DEPS
+vendor/lib64/libext_tflite_c.so
 vendor/lib64/libfsmsmartpaparse.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/mt6878/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
@@ -42,6 +46,7 @@ vendor/lib64/libmtktinyxml.so
 vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
+vendor/lib64/libvow_comp_test.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libswdap.so
