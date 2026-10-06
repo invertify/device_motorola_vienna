@@ -25,6 +25,9 @@ vendor/firmware/gdx_cfg_group.bin
 vendor/firmware/gdx_firmware.bin
 vendor/firmware/gdx_test_limits_255.csv
 
+# Camera - OIS
+vendor/firmware/mot_tele_dw9784.prog
+
 # Graphics
 vendor/bin/hw/mt6878/android.hardware.graphics.allocator-V2-service-mediatek.mt6878;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
 vendor/bin/hw/android.hardware.graphics.composer@3.2-service
