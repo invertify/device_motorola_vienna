@@ -201,12 +201,21 @@ vendor/lib64/libnvram_sec.so
 system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-v31.so;FIX_SONAME
 
 # Display (configs)
+vendor/etc/csot_vtdr6130_636_1200_2670_C3D_default.txt
+vendor/etc/csot_vtdr6130_636_1200_2670_C3D_p3.txt
+vendor/etc/csot_vtdr6130_636_1200_2670_C3D_srgb.txt
 vendor/etc/csot_vtdr6130_636_1200_2670_pq.xml
 vendor/etc/cust_color.xml
 vendor/etc/cust_pq.xml
 vendor/etc/hdrcfg.cfg
 vendor/etc/pq_flag.xml
+vendor/etc/tianma_nt37707_636_1200_2670_C3D_default.txt
+vendor/etc/tianma_nt37707_636_1200_2670_C3D_p3.txt
+vendor/etc/tianma_nt37707_636_1200_2670_C3D_srgb.txt
 vendor/etc/tianma_nt37707_636_1200_2670_pq.xml
+vendor/etc/tianma_nt37707_636_1200_2670_u9_C3D_default.txt
+vendor/etc/tianma_nt37707_636_1200_2670_u9_C3D_p3.txt
+vendor/etc/tianma_nt37707_636_1200_2670_u9_C3D_srgb.txt
 vendor/etc/tianma_nt37707_636_1200_2670_u9_pq.xml
 
 # Display (Firmware)
