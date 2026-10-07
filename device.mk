@@ -155,8 +155,7 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    android.hardware.power-service.pixel-libperfmgr
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
