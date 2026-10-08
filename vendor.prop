@@ -85,6 +85,9 @@ debug.hwui.use_hint_manager=true
 vendor.powerhal.disable_iosched=1
 vendor.powerhal.disp.idle_support=false
 
+# USB
+vendor.usb.controller=11201000.usb0
+
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
