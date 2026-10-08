@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/motorola/vienna/device.mk)
 
+# Disable ADB authentication (userdebug is otherwise secure and not debuggable)
+WITH_ADB_INSECURE := true
+
 # Inherit some common lineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
