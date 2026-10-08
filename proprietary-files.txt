@@ -192,6 +192,18 @@ vendor/firmware/aw963xx_reg_0.bin
 vendor/firmware/fs19xx.fsm
 vendor/firmware/tfa98xx.cnt
 
+# Bluetooth (Driver)
+vendor/etc/init/init.bt_drv.rc
+vendor/lib64/libbluetooth_mtk.so
+vendor/lib64/libbluetooth_mtk_pure.so
+vendor/lib64/libbt-vendor.so
+
+# Bluetooth (Firmware)
+vendor/firmware/BT_FW.cfg
+vendor/firmware/soc7_0_ram_bt_1_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1a_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1b_1_hdr.bin
+
 # NVRAM
 vendor/lib64/libfile_op.so
 vendor/lib64/libnvram.so

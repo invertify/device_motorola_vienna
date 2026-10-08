@@ -85,6 +85,10 @@ debug.hwui.use_hint_manager=true
 vendor.powerhal.disable_iosched=1
 vendor.powerhal.disp.idle_support=false
 
+# Bluetooth
+ro.vendor.bt.connac3=no
+ro.vendor.bt.platform=6878
+
 # USB
 vendor.usb.controller=11201000.usb0
 
