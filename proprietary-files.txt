@@ -282,6 +282,7 @@ vendor/lib64/libtrm.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
 vendor/lib64/libwpfa.so
+vendor/lib64/motrilutils.so
 vendor/lib64/vendor.mediatek.hardware.clientapi-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.atci-V1-ndk.so
