@@ -220,3 +220,6 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.vsync_event_phase_offset_ns=9777779
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=-6333333
 ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# Thermal
+ro.vendor.mtk_thermal_2_0=1
