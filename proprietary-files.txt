@@ -281,7 +281,6 @@ vendor/etc/thermal/thermal_policy_16.conf
 vendor/etc/thermal/thermal_policy_17.conf
 vendor/etc/thermal/thermal_policy_18.conf
 vendor/etc/vintf/manifest/thermal-mediatek.xml
-vendor/lib64/android.hardware.thermal-V1-ndk.so
 vendor/lib64/hw/thermal_hal.so
 vendor/lib64/libifcutils_mtk.so
 
