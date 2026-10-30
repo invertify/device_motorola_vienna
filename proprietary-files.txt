@@ -247,7 +247,7 @@ vendor/firmware/fs3001_rtp_Verizon_Airwaves.bin
 vendor/firmware/fs3001_rtp_Zero_Hour.bin
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal-service.mediatek
+vendor/bin/hw/android.hardware.thermal-service.mediatek;MODULE_SUFFIX=-stock
 vendor/bin/thermal_core
 vendor/bin/thermal_intf
 vendor/etc/init/init.thermal_core.rc
