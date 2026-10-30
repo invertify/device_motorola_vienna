@@ -247,7 +247,9 @@ vendor/firmware/fs3001_rtp_Verizon_Airwaves.bin
 vendor/firmware/fs3001_rtp_Zero_Hour.bin
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal-service.mediatek;MODULE_SUFFIX=-stock
+# Same Soong name as hardware/mediatek so prefer:true replaces the V3 source HAL.
+# DISABLE_DEPS drops V1-ndk from this module (V1+V3 in one target is illegal).
+vendor/bin/hw/android.hardware.thermal-service.mediatek;DISABLE_DEPS
 vendor/bin/thermal_core
 vendor/bin/thermal_intf
 vendor/etc/init/init.thermal_core.rc
